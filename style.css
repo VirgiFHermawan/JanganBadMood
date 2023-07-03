@@ -1,0 +1,158 @@
+:root {
+    --background-color: #333;
+    --text-color: #eee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    max-width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    color: var(--text-color);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+section {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    overflow: hidden;
+}
+img {
+    cursor: pointer;
+}
+section div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pages {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+.pages .wrapper {
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+    position: absolute;
+    z-index: 99;
+}
+.pages span {
+    position: absolute;
+    top: 30vh;
+}
+.btnWrap {
+    position: absolute;
+    bottom: 30vh;
+}
+.btnWrap .yes,
+.btnWrap .no {
+    margin: 0 10px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#start {
+    width: 100%;
+    height: 100%;
+}
+#start span {
+    position: absolute;
+    top: 30vh;
+}
+#start img {
+    transition: 1s;
+    cursor: pointer;
+}
+
+#a1 .wrapper .hide {
+    width: 24%;
+    height: 28%;
+    background-color: var(--background-color);
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    top: 0;
+}
+#a1_1 {
+    opacity: 0%;
+    animation: a1_1 1.5s ease 0s 1 alternate forwards;
+}
+@keyframes a1_1 {
+    19% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 100%;
+    }
+    99% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+#a1_2 {
+    opacity: 0%;
+}
+
+#imgA12 {
+    width: 60vw;
+    height: 60vw;
+}
+#hitung {
+    font-size: 100px;
+    color: var(--text-color);
+    word-wrap: break-word;
+    margin: 20px;
+    text-align: center;
+}
+
+.cover {
+    width: 61vw;
+    height: 61vw;
+    background-color: var(--background-color);
+    position: absolute;
+    animation: cover 2s ease-in 1s 1 alternate forwards;
+}
+@keyframes cover {
+    0% {
+        transform: translate(0, 0);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    }
+    100% {
+        transform: translate(-400px, 0);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    }
+}
+section img#her {
+    width: 60vw;
+    height: 60vw;
+}
+section .run {
+    position: absolute;
+    right: -30vw;
+    width: 30vw;
+    animation: move 3s ease-in 0s 1 alternate forwards;
+}
+section .run img {
+    width: 100%;
+}
+section .run span {
+    font-family: fantasy;
+    position: absolute;
+    right: 0;
+    top: -30px;
+}
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-600px, 0);
+    }
+}
